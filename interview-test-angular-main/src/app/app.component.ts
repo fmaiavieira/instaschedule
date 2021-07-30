@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
         }
       });
       this.scheduleForm.get('image').patchValue(new FormBuilder());
-      this.scheduleForm.get('date').reset();
+      this.scheduleForm.get('date').patchValue('');
     }
   }
 }
