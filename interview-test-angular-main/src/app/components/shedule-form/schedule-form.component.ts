@@ -37,6 +37,7 @@ export class ScheduleFormComponent implements OnInit {
   schedule($event): any {
     this.postSchedule.emit($event);
     this.getSchedules();
+    this.date = undefined;
   }
 
   setFormDate(): any{
