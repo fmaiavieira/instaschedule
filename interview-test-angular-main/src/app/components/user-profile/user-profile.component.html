@@ -1,0 +1,16 @@
+<div class="profile">
+    <img *ngIf="channel?.user.profile_pic_url" width="{{imgWidth}}" src="{{ channel?.user.profile_pic_url }}"/>
+    <div *ngIf="shoWdetails">
+        <div class="profile-username">
+            {{ channel?.user.username }}
+        </div>
+        <div class="profile-details">
+            {{ channel?.user.follower_count }} Followers | {{ channel?.user.following_count }} Following
+        </div>
+        <div class="profile-details" *ngIf="channel?.user.is_business">
+            Business Profile
+        </div>
+    </div>
+</div>
+
+

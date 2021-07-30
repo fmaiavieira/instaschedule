@@ -1,0 +1,35 @@
+div{
+    height: 100%;
+    width: 100%;
+    border-right: 1px solid #dbe1e8;
+}
+
+@media screen and(max-width:768px) {
+    div{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid #dbe1e8;
+    }
+    app-side-menu{
+        height: 100%;
+        width: 50%;
+    }
+    app-user-profile{
+        margin: 0 5%;
+    }
+}
+@media screen and(max-width:425px) {
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    app-side-menu{
+        height: 100%;
+        width: 70%;
+    }
+}

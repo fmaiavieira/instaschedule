@@ -1,0 +1,8 @@
+<div class="app">
+  <app-header [channelControl]="scheduleForm.get('channel')"></app-header>
+  <div class="main-content">
+    <app-left-sidebar [typeControl]="scheduleForm.get('type')" [channel]="this.scheduleForm.get('channel').value"></app-left-sidebar>
+    <app-schedule-form (postSchedule)="schedule()" [imageControl]="scheduleForm.get('image')" [dateControl]="this.scheduleForm.get('date')" [postType]="this.scheduleForm.get('type').value"></app-schedule-form>
+  </div>
+</div>
+

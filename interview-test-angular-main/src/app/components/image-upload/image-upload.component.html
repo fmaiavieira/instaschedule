@@ -1,0 +1,14 @@
+
+<section class="file-upload">
+  <div class="dropzone" appImageUpload (fileDropped)="onDropFile($event)" (imageUrl)="setDroppedUrl($event)">
+    <div *ngIf="!this.imageControl.value.url">
+      <input type='file' id="drop-area" accept="image/png, image/jpeg" (change)="onSelectFile($event)">
+      <img src="/assets/cloud-icon.svg" alt="upload-image">
+      <h3>Arraste uma imagem</h3>
+      <h3>ou</h3>
+      <label for="drop-area">Clique para escolher</label>
+    </div>
+    <img class="image-preview" *ngIf="this.imageControl.value.url != null" [src]="this.imageControl.value.url" height="200" alt="image"> <br/>
+  </div>
+</section>
+

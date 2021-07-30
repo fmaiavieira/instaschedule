@@ -1,0 +1,30 @@
+div{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #dbe1e8;
+    padding: 10px 0%;
+    
+    img{
+        height: 40px;
+        margin: 0 20px;
+    }
+    .navbar-profiles{
+        display: flex;
+    }
+}
+a{
+    width: 40px;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+@media screen and(max-width:725px) {
+    div{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+}

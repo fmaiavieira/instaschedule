@@ -1,0 +1,8 @@
+<div>
+    <img src="https://instamizer.postgrain.com/images/a93b277ff66737375b16.svg" alt="Postgrain" title="Postgrain">
+    <nav class="navbar-profiles">
+        <a *ngFor="let channel of channels" (click)="selectChannel(channel)" class="profile-thumbnail">
+            <app-user-profile *ngIf="channel" [channel]="channel" imgWidth="40"></app-user-profile>
+        </a>
+    </nav>
+</div>

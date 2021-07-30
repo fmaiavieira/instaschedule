@@ -1,0 +1,34 @@
+// novo
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+.app{
+  width: 100vw;
+  height: 100vh;
+}
+.main-content{
+  height: calc(100% - 83px);
+  min-height: 800px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: 'Open Sans', sans-serif;
+}
+
+app-schedule-form{
+  width: calc(100% - 261px);
+  height: 100%;
+}
+app-left-sidebar{
+  width: 260px;
+}
+
+@media screen and(max-width:768px) {
+  app-left-sidebar{
+    width: 100%;
+  }
+  app-schedule-form{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
