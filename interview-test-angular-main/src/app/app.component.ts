@@ -10,10 +10,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AppComponent implements OnInit {
   public scheduleForm: FormGroup;
-  
+
   public constructor(public apiService: ApiService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.scheduleForm = new FormBuilder().group({
       channel: [new FormBuilder().control, Validators.required],
       image: [new FormBuilder().control, Validators.required],
@@ -38,6 +38,6 @@ export class AppComponent implements OnInit {
       });
       this.scheduleForm.get('image').patchValue({url: null, file: null});
       this.scheduleForm.get('date').reset();
-    } 
+    }
   }
 }

@@ -17,10 +17,10 @@ export class ScheduleFormComponent implements OnInit {
   date: Date;
   schedules;
   schedulePeriod;
-  
+
   @Input() imageControl: FormControl;
   @Input() postType;
-  @Input() dateControl: FormControl
+  @Input() dateControl: FormControl;
   @Output() postSchedule = new EventEmitter<any>();
 
   public getOldest = new OldestDatePipe();
@@ -28,22 +28,22 @@ export class ScheduleFormComponent implements OnInit {
   public decrescent = new DecrescentOrderPipe();
 
   constructor(public apiService: ApiService) {
-    this.getSchedules()
+    this.getSchedules();
   }
 
   ngOnInit(): void {
-    
   }
+
   schedule($event): any {
     this.postSchedule.emit($event);
     this.getSchedules();
   }
 
   setFormDate(): any{
-    let yesterday = new Date();
+    const yesterday = new Date();
     yesterday.setDate(this.currentDate.getDate() - 1);
     const date = new Date(this.date + 'T' + this.currentDate.toLocaleTimeString());
-    
+
     if (yesterday > date){
       Swal.fire('A data não pode ser inferior a data de hoje.');
       this.date = this.currentDate;

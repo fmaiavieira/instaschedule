@@ -18,10 +18,10 @@ export class SideMenuComponent implements OnInit {
   changeOption(selected): any {
     this.selected = selected;
     this.optionSelected.emit(selected);
-    if(this.selected === 'Novo post'){
+    if (this.selected === 'Novo post'){
       this.typeControl.patchValue('feed');
     }
-    if(this.selected === 'Novo story'){
+    if (this.selected === 'Novo story'){
       this.typeControl.patchValue('history');
     }
   }

@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
   channels: any = [];
   @Input() channelControl: FormControl;
   constructor(public apiService: ApiService) {
-     this.getChannels()
+     this.getChannels();
    }
 
   ngOnInit(): void {
@@ -19,11 +19,10 @@ export class HeaderComponent implements OnInit {
   private getChannels(): any {
     this.apiService.getUsers().subscribe(channels => {
       this.channels = channels;
-      this.channelControl.patchValue(channels[0])
+      this.channelControl.patchValue(channels[0]);
     });
   }
   selectChannel(channel): any {
     this.channelControl.patchValue(channel);
   }
-
 }
