@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
           Swal.fire('Agendamento realizado!');
         }
       });
-      this.scheduleForm.get('image').patchValue({url: null, file: null});
+      this.scheduleForm.get('image').patchValue(new FormBuilder());
       this.scheduleForm.get('date').reset();
     }
   }
